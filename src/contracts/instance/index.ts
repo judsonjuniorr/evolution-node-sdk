@@ -18,22 +18,36 @@ import {
 
 import { proxySchemaRequest, setProxyResponse } from './proxy'
 
-const instanceSchema = z.object({
-  instanceName: instanceNameSchema,
-  instanceId: z.string(),
-  owner: z.string(),
-  profileName: z.string(),
-  profilePictureUrl: z.string().url().nullable(),
-  profileStatus: z.string().nullable(),
-  status: instanceStatus,
-  serverUrl: z.string(),
-  apikey: z.string(),
-  integration: z.object({
-    integration: integrationSchema,
-    token: z.string(),
-    webhook_wa_business: z.string(),
+const instanceSchema = z.union([
+  z.object({
+    instanceName: instanceNameSchema,
+    instanceId: z.string(),
+    owner: z.string(),
+    profileName: z.string(),
+    profilePictureUrl: z.string().url().nullable(),
+    profileStatus: z.string().nullable(),
+    status: z.literal('open'),
+    serverUrl: z.string(),
+    apikey: z.string(),
+    integration: z.object({
+      integration: integrationSchema,
+      token: z.string(),
+      webhook_wa_business: z.string(),
+    }),
   }),
-})
+  z.object({
+    instanceName: instanceNameSchema,
+    instanceId: z.string(),
+    status: z.enum(['close', 'connecting']),
+    serverUrl: z.string(),
+    apikey: z.string().optional(),
+    integration: z.object({
+      integration: integrationSchema,
+      token: z.string(),
+      webhook_wa_business: z.string(),
+    }),
+  }),
+])
 
 /**
  * Fetch instance types
@@ -71,7 +85,7 @@ export const fetchMultipleInstancesResponse = z.union([
       .transform((data) => data.map((d) => d.instance)),
   }),
 ])
-export type FetchMultipleInstancesResponse = z.infer<
+export type FetchMultipleInstancesResponse = z.output<
   typeof fetchMultipleInstancesResponse
 >
 // END Fetch instance list types

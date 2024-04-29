@@ -1,6 +1,6 @@
 {
   "name": "@herowcode/evolution-node-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4-4",
   "private": false,
   "description": "Evolution API Node.JS SDK Wrapper.",
   "main": "dist/index.js",
@@ -18,7 +18,8 @@
     "declaration": "tsc --declaration --emitDeclarationOnly",
     "release:major": "npm version major && git push origin && git push origin --tags",
     "release:minor": "npm version minor && git push origin && git push origin --tags",
-    "release:patch": "npm version patch && git push origin && git push origin --tags"
+    "release:patch": "npm version patch && git push origin && git push origin --tags",
+    "release:pre": "npm version prerelease && git push origin && git push origin --tags"
   },
   "peerDependencies": {
     "eslint": "^8.0.0",
