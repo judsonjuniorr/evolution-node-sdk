@@ -1,3 +1,5 @@
+import v1_7_4 from '@/lib/versions/v1.7.4'
+
 import { EvolutionVersion } from '@/contracts/EvoSDK'
 
 import { Instance } from '@/baselib/instance'
@@ -27,12 +29,12 @@ export class VersionManager {
     return new InstanceClass(...constructorParams)
   }
 
-  private async getVersionLib(lib: Libs) {
+  private async getVersionLib(lib: Libs): Promise<any> {
     const version = this.version
 
-    const { default: Class } = await import(`./versions/v${version}/${lib}`)
-    if (!Class) throw new Error('❌ Invalid version')
-
-    return Class
+    if (version === '1.7.4') {
+      return v1_7_4[lib]
+    }
+    throw new Error(`Version ${version} not supported`)
   }
 }
