@@ -1,6 +1,6 @@
 {
   "name": "@herowcode/evolution-node-sdk",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": false,
   "description": "Evolution API Node.JS SDK Wrapper.",
   "main": "dist/index.js",
