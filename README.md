@@ -15,10 +15,16 @@ Non official SDK for [Evolution API](https://github.com/EvolutionAPI/evolution-a
 Install Evolution Node SDK with npm
 
 ```bash
-  npm add evolution-node-sdk
-  yarn add evolution-node-sdk
-  pnpm add evolution-node-sdk
-  bun add evolution-node-sdk
+npm add evolution-node-sdk
+```
+```bash
+yarn add evolution-node-sdk
+```
+```bash
+pnpm add evolution-node-sdk
+```
+```bash
+bun add evolution-node-sdk
 ```
 
 ## Usage/Examples
