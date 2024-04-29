@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "@herowcode/eslint-config/node"
+  ],
+  "rules": {
+    "camelcase": "off",
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "module",
+          "/^@/contracts/",
+          "/^@/baselib/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
+  }
+}
