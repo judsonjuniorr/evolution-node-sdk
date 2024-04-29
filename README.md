@@ -6,10 +6,11 @@ Non official SDK for [Evolution API](https://github.com/EvolutionAPI/evolution-a
 [![Maintainer](https://img.shields.io/badge/maintainer-%40judsonjuniorr-%239580FF?style=plastic)](https://judsoncairo.com)
 [![Source Code](https://img.shields.io/badge/source-judsonjuniorr/evolution--node--sdk-%239580FF?style=plastic)](https://github.com/judsonjuniorr/evolution-node-sdk)
 [![Latest Version](https://img.shields.io/github/release/judsonjuniorr/evolution-node-sdk.svg?style=plastic&color=%239580FF)](https://github.com/judsonjuniorr/evolution-node-sdk/releases)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=plastic)](LICENSE)
-[![Build](https://img.shields.io/scrutinizer/build/g/judsonjuniorr/evolution-node-sdk.svg?style=plastic)](https://scrutinizer-ci.com/g/judsonjuniorr/evolution-node-sdk)
-[![Quality Score](https://img.shields.io/scrutinizer/g/judsonjuniorr/evolution-node-sdk.svg?style=pplastic)](https://scrutinizer-ci.com/g/judsonjuniorr/evolution-node-sdk)
-[![Total Downloads](https://img.shields.io/packagist/dt/judsonjuniorr/evolution-node-sdk.svg?style=plastic)](https://packagist.org/packages/judsonjuniorr/evolution-node-sdk)
+![GitHub License](https://img.shields.io/github/license/judsonjuniorr/evolution-node-sdk)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/judsonjuniorr/evolution-node-sdk/npm.yml)
+![Total Downloads](https://img.shields.io/npm/d18m/%40herowcode%2Fevolution-node-sdk)
+
+
 ## Installation
 
 Install Evolution Node SDK with npm
