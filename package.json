@@ -18,7 +18,8 @@
     "declaration": "tsc --declaration --emitDeclarationOnly",
     "release:major": "npm version major && git push origin && git push origin --tags",
     "release:minor": "npm version minor && git push origin && git push origin --tags",
-    "release:patch": "npm version patch && git push origin && git push origin --tags"
+    "release:patch": "npm version patch && git push origin && git push origin --tags",
+    "release:prepatch": "npm version prepatch && git push origin && git push origin --tags"
   },
   "peerDependencies": {
     "eslint": "^8.0.0",
