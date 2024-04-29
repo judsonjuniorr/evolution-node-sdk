@@ -16,22 +16,22 @@ Non official SDK for [Evolution API](https://github.com/EvolutionAPI/evolution-a
 Install Evolution Node SDK with npm
 
 ```bash
-npm add evolution-node-sdk
+npm add @herowcode/evolution-node-sdk
 ```
 ```bash
-yarn add evolution-node-sdk
+yarn add @herowcode/evolution-node-sdk
 ```
 ```bash
-pnpm add evolution-node-sdk
+pnpm add @herowcode/evolution-node-sdk
 ```
 ```bash
-bun add evolution-node-sdk
+bun add @herowcode/evolution-node-sdk
 ```
 
 ## Usage/Examples
 
 ```typescript
-import EvoSDK from 'evolution-node-sdk'
+import EvoSDK from '@herowcode/evolution-node-sdk'
 
 const sdk = new EvoSDK({
   url: 'https://your-evolution-endpoint.com',
